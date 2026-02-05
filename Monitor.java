@@ -9,6 +9,6 @@ public class Monitor {
     }
 
     public String identity() {
-        return "I am the Monitor class. I display visual output from the computer.\n";
+        return "I am the Monitor. I display visual output from the computer.\n";
     }
 }
