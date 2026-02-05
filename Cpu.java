@@ -1,4 +1,4 @@
-public class CPU {
+public class Cpu {
 
     private String processor;
     private int ram;
@@ -6,7 +6,7 @@ public class CPU {
     private Keyboard keyboard;
     private Mouse mouse;
 
-    public CPU(String processor, int ram, Monitor monitor, Mouse mouse) {
+    public Cpu(String processor, int ram, Monitor monitor, Mouse mouse) {
         this.processor = processor;
         this.ram = ram;
         this.monitor = monitor;
@@ -23,7 +23,7 @@ public class CPU {
         Mouse mouse = new Mouse(1200, true);
         Keyboard keyboard = new Keyboard("Mechanical", 104);
 
-        CPU cpu = new CPU("Intel i5", 8, monitor, mouse);
+        Cpu cpu = new Cpu("Intel i5", 8, monitor, mouse);
         cpu.connectKeyboard(keyboard);
 
         String output =
