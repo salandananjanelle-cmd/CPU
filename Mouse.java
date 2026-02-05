@@ -1,4 +1,5 @@
 public class Mouse {
+
     private int dpi;
     private boolean wireless;
 
@@ -7,15 +8,7 @@ public class Mouse {
         this.wireless = wireless;
     }
 
-    public String click() {
-        return "Mouse click registered.\n";
-    }
-
-    public String movePointer() {
-        return "Mouse pointer moved.\n";
-    }
-
-    public String identify() {
-        return "I am the Mouse class. I control pointer movement and clicks.\n";
+    public String identity() {
+        return "I am the Mouse class. I handle pointer movement and clicking actions.\n";
     }
 }
