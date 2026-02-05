@@ -1,4 +1,4 @@
-public class Mouse {
+ class Mouse {
 
     private int dpi;
     private boolean wireless;

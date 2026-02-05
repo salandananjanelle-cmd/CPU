@@ -27,8 +27,7 @@ public class CPU {
         cpu.connectKeyboard(keyboard);
 
         String output =
-                identity()
-              + cpu.identity()
+                cpu.identity()
               + monitor.identity()
               + mouse.identity()
               + keyboard.identity();
@@ -36,11 +35,7 @@ public class CPU {
         System.out.println(output); // ✅ ONLY println in the entire program
     }
 
-    public static String identity() {
-        return "I am the CPU class. I control the execution of the computer system.\n";
-    }
-
     public String identity() {
-        return "I am a CPU object. I manage processing tasks and connected hardware.\n";
+        return "I am the CPU class. I control execution and manage connected hardware.\n";
     }
 }
