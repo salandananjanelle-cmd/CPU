@@ -9,6 +9,6 @@ public class Keyboard {
     }
 
     public String identity() {
-        return "I am the Keyboard class. I allow the user to input text and commands.\n";
+        return "I am the Keyboard. I allow the user to input text and commands.\n";
     }
 }
