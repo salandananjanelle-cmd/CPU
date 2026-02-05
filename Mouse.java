@@ -9,6 +9,6 @@ public class Mouse {
     }
 
     public String identity() {
-        return "I am the Mouse class. I handle pointer movement and clicking actions.\n";
+        return "I am the Mouse. I handle pointer movement and clicking actions.\n";
     }
 }
