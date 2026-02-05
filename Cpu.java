@@ -2,40 +2,40 @@ public class Cpu {
 
     private String processor;
     private int ram;
-    private Monitor monitor;
-    private Keyboard keyboard;
-    private Mouse mouse;
 
-    public Cpu(String processor, int ram, Monitor monitor, Mouse mouse) {
+    private Monitor monitor;     
+    private Mouse mouse;         
+    private Keyboard keyboard;   
+
+    public Cpu(String processor, int ram) {
         this.processor = processor;
         this.ram = ram;
-        this.monitor = monitor;
-        this.mouse = mouse;
+
+        this.mouse = new Mouse(1200, true);
+        this.keyboard = new Keyboard("Mechanical", 104);
     }
 
-    public void connectKeyboard(Keyboard keyboard) {
-        this.keyboard = keyboard;
+    public void connectMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
+
+    public String identity() {
+        return "I am the CPU class. I control execution and manage connected hardware.\n";
     }
 
     public static void main(String[] args) {
 
-        Monitor monitor = new Monitor("24 inches", "1920x1080");
-        Mouse mouse = new Mouse(1200, true);
-        Keyboard keyboard = new Keyboard("Mechanical", 104);
+        Monitor monitor = new Monitor("24 inches", "1920x1080"); 
 
-        Cpu cpu = new Cpu("Intel i5", 8, monitor, mouse);
-        cpu.connectKeyboard(keyboard);
+        Cpu cpu = new Cpu("Intel i5", 8);
+        cpu.connectMonitor(monitor);
 
         String output =
                 cpu.identity()
-              + monitor.identity()
-              + mouse.identity()
-              + keyboard.identity();
+              + cpu.keyboard.identity()
+              + cpu.mouse.identity()
+              + monitor.identity();
 
-        System.out.println(output); // ✅ ONLY println in the entire program
-    }
-
-    public String identity() {
-        return "I am the CPU. I control execution and manage connected hardware.\n";
+        System.out.println(output); 
     }
 }
