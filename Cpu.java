@@ -20,7 +20,7 @@ public class Cpu {
     }
 
     public String identity() {
-        return "I am the CPU class. I control execution and manage connected hardware.\n";
+        return "I am the CPU. I control execution and manage connected hardware.\n";
     }
 
     public static void main(String[] args) {
